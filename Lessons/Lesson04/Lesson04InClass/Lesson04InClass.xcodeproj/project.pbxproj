@@ -161,9 +161,11 @@
 				TargetAttributes = {
 					5DFD77131A3F751B00C6796B = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = X62ZPQ93S5;
 					};
 					5DFD77281A3F751B00C6796B = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = X62ZPQ93S5;
 						TestTargetID = 5DFD77131A3F751B00C6796B;
 					};
 				};
@@ -356,6 +358,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -367,6 +371,7 @@
 				INFOPLIST_FILE = Lesson04InClassTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson04InClass.app/Lesson04InClass";
 			};
 			name = Debug;
@@ -375,6 +380,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -382,6 +389,7 @@
 				INFOPLIST_FILE = Lesson04InClassTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lesson04InClass.app/Lesson04InClass";
 			};
 			name = Release;
@@ -405,6 +413,7 @@
 				5DFD77351A3F751B00C6796B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DFD77361A3F751B00C6796B /* Build configuration list for PBXNativeTarget "Lesson04InClassTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				5DFD77381A3F751B00C6796B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
