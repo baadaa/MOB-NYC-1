@@ -12,6 +12,7 @@
 		5D06C68219D8CFFE0082F2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C68019D8CFFE0082F2DE /* Main.storyboard */; };
 		5D06C68419D8CFFE0082F2DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C68319D8CFFE0082F2DE /* Images.xcassets */; };
 		5D06C69319D8CFFE0082F2DE /* Lesson01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C69219D8CFFE0082F2DE /* Lesson01Tests.swift */; };
+		808D96981A5B6C71009024FF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808D96971A5B6C71009024FF /* InfoViewController.swift */; };
 		8090E6521A3823C600A8EE72 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8090E6511A3823C600A8EE72 /* cat.jpg */; };
 		80E3DFBD1A38133100780044 /* login-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80E3DFBB1A38133100780044 /* login-bg.jpg */; };
 		80E3DFBE1A38133100780044 /* 10152550_10152022055752957_1009078002_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80E3DFBC1A38133100780044 /* 10152550_10152022055752957_1009078002_n.jpg */; };
@@ -37,6 +38,7 @@
 		5D06C68C19D8CFFE0082F2DE /* Lesson01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D06C69119D8CFFE0082F2DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D06C69219D8CFFE0082F2DE /* Lesson01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson01Tests.swift; sourceTree = "<group>"; };
+		808D96971A5B6C71009024FF /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8090E6511A3823C600A8EE72 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		80E3DFBB1A38133100780044 /* login-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-bg.jpg"; sourceTree = "<group>"; };
 		80E3DFBC1A38133100780044 /* 10152550_10152022055752957_1009078002_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10152550_10152022055752957_1009078002_n.jpg; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				80E3DFB61A37ECE900780044 /* resources */,
 				5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */,
 				5D06C67E19D8CFFE0082F2DE /* ViewController.swift */,
+				808D96971A5B6C71009024FF /* InfoViewController.swift */,
 				5D06C68019D8CFFE0082F2DE /* Main.storyboard */,
 				5D06C68319D8CFFE0082F2DE /* Images.xcassets */,
 				5D06C67A19D8CFFE0082F2DE /* Supporting Files */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D06C67F19D8CFFE0082F2DE /* ViewController.swift in Sources */,
+				808D96981A5B6C71009024FF /* InfoViewController.swift in Sources */,
 				5D06C67D19D8CFFE0082F2DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
