@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-409" y="407"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Lesson03" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,18 +32,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Di-GNm">
-                                <rect key="frame" x="154" y="187" width="294" height="154"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe horizontally to touch the universe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Di-GNm">
+                                <rect key="frame" x="144" y="121" width="313" height="89"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="293.5" id="pEs-UT-NKI"/>
-                                    <constraint firstAttribute="height" constant="154" id="z5Q-zy-Nta"/>
+                                    <constraint firstAttribute="width" constant="313" id="pEs-UT-NKI"/>
+                                    <constraint firstAttribute="height" constant="89" id="z5Q-zy-Nta"/>
                                 </constraints>
-                                <string key="text">TODO: When this is swiped horizontally,
-a modal should appear.
-It needs to have an image view and a dismiss button that dismisses the modal. Do this in code.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="33"/>
+                                <color key="textColor" red="0.95008680560000003" green="0.090701924389999994" blue="0.22065663029999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG3-bY-Vru">
@@ -55,30 +51,99 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                                 <state key="normal" title="Display Table View">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="displayTableViewButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M1Y-97-j0f"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipe-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="BpF-fe-b6M">
+                                <rect key="frame" x="154" y="227" width="293" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="6nY-zg-wF4"/>
+                                    <constraint firstAttribute="height" constant="146" id="Uhs-5K-MlE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="AG3-bY-Vru" secondAttribute="centerX" id="0zs-lK-Y2n"/>
                             <constraint firstAttribute="centerY" secondItem="AG3-bY-Vru" secondAttribute="centerY" constant="-97" id="RgT-FV-BaV"/>
+                            <constraint firstAttribute="centerX" secondItem="BpF-fe-b6M" secondAttribute="centerX" id="Zqw-g7-vew"/>
                             <constraint firstAttribute="centerX" secondItem="NMl-Di-GNm" secondAttribute="centerX" id="daB-TD-fOi"/>
-                            <constraint firstAttribute="centerY" secondItem="NMl-Di-GNm" secondAttribute="centerY" constant="36" id="lkv-nx-NKf"/>
+                            <constraint firstAttribute="centerY" secondItem="NMl-Di-GNm" secondAttribute="centerY" constant="134.5" id="lkv-nx-NKf"/>
+                            <constraint firstItem="BpF-fe-b6M" firstAttribute="top" secondItem="NMl-Di-GNm" secondAttribute="bottom" constant="17" id="lz2-9z-njB"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="J1m-cN-DMQ" appends="YES" id="t90-Vc-1yF"/>
+                            <outletCollection property="gestureRecognizers" destination="fqV-9A-2mV" appends="YES" id="Zds-AM-QbY"/>
+                            <outletCollection property="gestureRecognizers" destination="eDZ-dq-bJV" appends="YES" id="jzR-wW-NWf"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="hzY-Hy-RMA"/>
+                    <navigationItem key="navigationItem" title="Home" id="hzY-Hy-RMA"/>
                     <connections>
-                        <outlet property="didSwipe" destination="J1m-cN-DMQ" id="BZ0-9x-WqT"/>
                         <segue destination="tH5-nV-9zA" kind="show" identifier="show" id="O1F-Kb-DN0"/>
+                        <segue destination="mhX-LR-6SF" kind="presentation" identifier="swipeSegue" id="HA3-Z2-X24"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="J1m-cN-DMQ"/>
+                <swipeGestureRecognizer direction="left" id="fqV-9A-2mV">
+                    <connections>
+                        <action selector="didSwipeHorizontally:" destination="vXZ-lx-hvc" id="fTL-lK-O8d"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="eDZ-dq-bJV">
+                    <connections>
+                        <action selector="didSwipeHorizontally:" destination="vXZ-lx-hvc" id="30B-f3-5dc"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="282.75" y="407"/>
+            <point key="canvasLocation" x="282" y="407"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zYG-1X-yJF">
+            <objects>
+                <viewController id="mhX-LR-6SF" customClass="ViewController" customModule="Lesson03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f1e-CF-G45"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gb1-M9-uC3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vdc-KK-iTF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchTheUniverse.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="t1K-fT-jIf">
+                                <rect key="frame" x="0.0" y="132" width="600" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="ITO-wQ-yyk"/>
+                                    <constraint firstAttribute="width" constant="600" id="RH8-Mo-HHH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7O-bB-Ndu">
+                                <rect key="frame" x="273" y="67" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lxx-fe-3Cs"/>
+                                    <constraint firstAttribute="width" constant="54" id="xoW-yx-cx8"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonIsTapped:" destination="mhX-LR-6SF" eventType="touchUpInside" id="AP6-La-TJs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="o7O-bB-Ndu" secondAttribute="centerX" id="0D7-hb-tyt"/>
+                            <constraint firstAttribute="centerX" secondItem="t1K-fT-jIf" secondAttribute="centerX" id="7T7-iL-fhF"/>
+                            <constraint firstItem="t1K-fT-jIf" firstAttribute="top" secondItem="o7O-bB-Ndu" secondAttribute="bottom" constant="35" id="DoI-cy-Uir"/>
+                            <constraint firstAttribute="centerY" secondItem="t1K-fT-jIf" secondAttribute="centerY" id="loZ-IU-Vql"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="StB-6M-du7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="1103"/>
         </scene>
         <!--Array Table View Controller-->
         <scene sceneID="hS5-QX-ITe">
@@ -99,4 +164,8 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
             <point key="canvasLocation" x="969" y="407"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="swipe-icon.png" width="600" height="700"/>
+        <image name="touchTheUniverse.jpg" width="1400" height="800"/>
+    </resources>
 </document>
