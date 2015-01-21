@@ -24,13 +24,12 @@ class ViewController: UITableViewController, UITableViewDataSource, UITableViewD
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = teachers[indexPath.row]
+        cell.textLabel.text = teachers[indexPath.row]
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
 }
 
