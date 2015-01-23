@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dS6-0d-2O9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dS6-0d-2O9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Todo!-->
@@ -57,39 +57,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-9y-0ts">
-                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter task" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-9y-0ts">
+                                <rect key="frame" x="150" y="155" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U4A-Qf-wey"/>
-                                    <constraint firstAttribute="width" constant="97" id="iE2-nP-e5B"/>
+                                    <constraint firstAttribute="width" constant="300" id="iE2-nP-e5B"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter status" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-eg-Drp">
+                                <rect key="frame" x="150" y="193" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="DSs-mP-HYb"/>
+                                    <constraint firstAttribute="height" constant="30" id="N1c-Hg-R01"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="mwv-tu-xlM"/>
+                                    <constraint firstAttribute="width" constant="300" id="vc4-zp-XEO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter due date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-QV-jVx">
+                                <rect key="frame" x="150" y="231" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5G8-P9-GQR"/>
+                                    <constraint firstAttribute="width" constant="300" id="kuN-hV-B7H"/>
+                                    <constraint firstAttribute="height" constant="30" id="lpx-Ml-5b9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="y3Y-BH-j0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl1-QG-voM">
-                                <rect key="frame" x="285" y="323" width="30" height="30"/>
+                                <rect key="frame" x="307" y="285" width="143" height="30"/>
+                                <color key="backgroundColor" red="0.13844548784598257" green="0.77450284089999999" blue="0.22325627506381579" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HVZ-Cf-lw1"/>
-                                    <constraint firstAttribute="width" constant="30" id="PjT-0z-sNA"/>
+                                    <constraint firstAttribute="width" constant="143" id="PjT-0z-sNA"/>
                                 </constraints>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Done adding">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapButton:" destination="Ubv-u0-chb" eventType="touchUpInside" id="fw7-dH-AnI"/>
+                                    <action selector="didTapDoneButton:" destination="Ubv-u0-chb" eventType="touchUpInside" id="BtK-g9-7bq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-Dk-JbF">
+                                <rect key="frame" x="150" y="285" width="144" height="30"/>
+                                <color key="backgroundColor" red="0.60836608479999998" green="0.79557291669999997" blue="0.2051710628" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="53D-yY-zVP"/>
+                                    <constraint firstAttribute="height" constant="30" id="9lX-Nd-9SJ"/>
+                                    <constraint firstAttribute="width" constant="144" id="ZPI-e9-89f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="b9T-hX-oox"/>
+                                </constraints>
+                                <state key="normal" title="Add this to-do">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAddButton:" destination="Ubv-u0-chb" eventType="touchUpInside" id="gUC-Hx-CZX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-Up-fcF">
+                                <rect key="frame" x="150" y="119" width="300" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4zd-V5-JzJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="mDI-SP-B7C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add one to-do at a time!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-FX-bW7">
+                                <rect key="frame" x="181" y="77" width="239" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="H1d-UP-dfn"/>
+                                    <constraint firstAttribute="width" constant="239" id="TIa-xA-3Yr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32400173609999999" green="0.32400173609999999" blue="0.32400173609999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zl1-QG-voM" firstAttribute="top" secondItem="RHO-9y-0ts" secondAttribute="bottom" constant="8" id="5Rf-DE-iWk"/>
-                            <constraint firstAttribute="centerX" secondItem="zl1-QG-voM" secondAttribute="centerX" id="5Yt-SQ-v0h"/>
+                            <constraint firstItem="dIn-FX-bW7" firstAttribute="top" secondItem="4VP-jJ-npf" secondAttribute="bottom" constant="57" id="2FA-2I-aTv"/>
+                            <constraint firstItem="Jyt-Up-fcF" firstAttribute="top" secondItem="dIn-FX-bW7" secondAttribute="bottom" constant="14" id="4Ul-CE-XbA"/>
+                            <constraint firstItem="zl1-QG-voM" firstAttribute="top" secondItem="RHO-9y-0ts" secondAttribute="bottom" constant="100" id="5Rf-DE-iWk"/>
+                            <constraint firstAttribute="centerX" secondItem="zl1-QG-voM" secondAttribute="centerX" constant="-78.5" id="5Yt-SQ-v0h"/>
+                            <constraint firstAttribute="centerX" secondItem="O8K-Dk-JbF" secondAttribute="centerX" constant="78" id="ACf-Yz-eOh"/>
+                            <constraint firstItem="tF1-eg-Drp" firstAttribute="top" secondItem="RHO-9y-0ts" secondAttribute="bottom" constant="8" id="MvD-rX-bIm"/>
+                            <constraint firstAttribute="centerX" secondItem="Jyt-Up-fcF" secondAttribute="centerX" id="VmX-z9-kpA"/>
+                            <constraint firstAttribute="centerX" secondItem="tF1-eg-Drp" secondAttribute="centerX" id="XKN-Cc-bvL"/>
+                            <constraint firstItem="O8K-Dk-JbF" firstAttribute="top" secondItem="ehh-QV-jVx" secondAttribute="bottom" constant="24" id="fa7-Fl-oSJ"/>
+                            <constraint firstAttribute="centerX" secondItem="ehh-QV-jVx" secondAttribute="centerX" id="jAl-yl-VFZ"/>
                             <constraint firstAttribute="centerX" secondItem="RHO-9y-0ts" secondAttribute="centerX" id="pM8-pl-cLR"/>
-                            <constraint firstAttribute="centerY" secondItem="RHO-9y-0ts" secondAttribute="centerY" id="trP-Rd-2aF"/>
+                            <constraint firstItem="ehh-QV-jVx" firstAttribute="top" secondItem="tF1-eg-Drp" secondAttribute="bottom" constant="8" id="qIV-My-tVg"/>
+                            <constraint firstAttribute="centerY" secondItem="RHO-9y-0ts" secondAttribute="centerY" constant="130" id="trP-Rd-2aF"/>
+                            <constraint firstAttribute="centerX" secondItem="dIn-FX-bW7" secondAttribute="centerX" id="ycj-bh-gcz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="RHO-9y-0ts" id="Qd0-ZA-IO9"/>
+                        <outlet property="dueDateTextField" destination="ehh-QV-jVx" id="A8g-HU-gA2"/>
+                        <outlet property="messageOutput" destination="Jyt-Up-fcF" id="egg-7m-pyC"/>
+                        <outlet property="statusTextField" destination="tF1-eg-Drp" id="MUe-aM-o4Q"/>
+                        <outlet property="taskTextField" destination="RHO-9y-0ts" id="QIj-IV-8B2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEe-BA-ZOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
