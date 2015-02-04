@@ -17,6 +17,36 @@
             endingLineNumber = "11"
             landmarkName = "ArrayViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lesson04.ArrayViewController.__deallocating_deinit"
+                  moduleName = "Lesson04"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/github/Assesments/04/Lesson04/ArrayViewController.swift"
+                  timestampString = "444613368.889974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Lesson04.ArrayViewController.__ivar_destroyer"
+                  moduleName = "Lesson04"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/github/Assesments/04/Lesson04/ArrayViewController.swift"
+                  timestampString = "444613368.893151"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
