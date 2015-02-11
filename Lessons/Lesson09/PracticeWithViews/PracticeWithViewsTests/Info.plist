@@ -7,7 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
+<<<<<<< HEAD
 	<string>com.baadaa.$(PRODUCT_NAME:rfc1034identifier)</string>
+=======
+	<string>com.ga.$(PRODUCT_NAME:rfc1034identifier)</string>
+>>>>>>> d020d1a52162cceed9e90850b9a27e6ca197b99a
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

@@ -2,8 +2,13 @@
 //  PracticeWithViewsTests.swift
 //  PracticeWithViewsTests
 //
+<<<<<<< HEAD
 //  Created by Bumhan Yu on 2/2/15.
 //  Copyright (c) 2015 Bumhan Yu. All rights reserved.
+=======
+//  Created by Rudd Taylor on 2/2/15.
+//  Copyright (c) 2015 GA. All rights reserved.
+>>>>>>> d020d1a52162cceed9e90850b9a27e6ca197b99a
 //
 
 import UIKit
