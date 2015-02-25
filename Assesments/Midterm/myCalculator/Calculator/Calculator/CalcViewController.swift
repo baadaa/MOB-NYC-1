@@ -58,6 +58,7 @@ class CalcViewController: UIViewController {
     var lastTappedNumber:String = ""
         // Track the last tapped keys
     
+    var lastInputNumber:String = ""
     var calcResult:Double = 0
         // Variable for calculation results
     
@@ -328,6 +329,10 @@ class CalcViewController: UIViewController {
             case "=":
                 
                 if lastTappedKey == "=" {
+                    prevNum.text = currentNum.text! + " " + lastTappedOperator + " "
+                    println("WIP")
+                    
+                    return
                 
                 }
                 
