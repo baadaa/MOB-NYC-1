@@ -230,6 +230,9 @@
                             <constraint firstItem="e66-bG-ZBU" firstAttribute="top" secondItem="qPA-4h-ilE" secondAttribute="bottom" id="wFw-wb-w01"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sixthTextView" destination="qPA-4h-ilE" id="GIx-Ar-oXO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oU3-RH-uDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,12 +257,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OU-Yg-NTQ">
+                                <rect key="frame" x="260" y="285" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="27h-vq-muH"/>
+                                    <constraint firstAttribute="width" constant="81" id="6gY-Dh-BT1"/>
+                                </constraints>
+                                <state key="normal" title="Add Strings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addStringButtonTapped:" destination="ZvF-or-Q6s" eventType="touchUpInside" id="7J5-Ve-CEg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zK6-eo-u0G" firstAttribute="top" secondItem="nBD-AK-qjV" secondAttribute="bottom" id="0zj-su-Nni"/>
                             <constraint firstItem="nBD-AK-qjV" firstAttribute="leading" secondItem="0yb-HF-0ZL" secondAttribute="leadingMargin" id="IhN-YA-JIO"/>
                             <constraint firstItem="nBD-AK-qjV" firstAttribute="top" secondItem="0yb-HF-0ZL" secondAttribute="topMargin" id="ZiI-7T-YZ6"/>
+                            <constraint firstAttribute="centerX" secondItem="1OU-Yg-NTQ" secondAttribute="centerX" id="bI4-ab-Khc"/>
+                            <constraint firstAttribute="centerY" secondItem="1OU-Yg-NTQ" secondAttribute="centerY" id="fkQ-qK-s7C"/>
                             <constraint firstItem="nBD-AK-qjV" firstAttribute="trailing" secondItem="0yb-HF-0ZL" secondAttribute="trailingMargin" id="to1-OL-J0D"/>
                         </constraints>
                     </view>
