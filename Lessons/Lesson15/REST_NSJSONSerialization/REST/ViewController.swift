@@ -61,7 +61,7 @@ class ViewController: UITableViewController, UITableViewDataSource, UITableViewD
                     if let child = children[indexPath.row] as? NSDictionary {
                         if let data = child["data"] as? NSDictionary {
                             if let title = data["title"] as? NSString {
-                                cell.textLabel?.text = title
+                                cell.textLabel.text = title
                             }
                         }
                     }
