@@ -21,6 +21,9 @@ class SixthViewController: ExerciseViewController, UITableViewDelegate, UITableV
         self.tableView.frame = self.exerciseView.frame
         self.tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(self.navigationController!.navigationBar.frame), 0, 0, 0)
         self.tableView.autoresizingMask = self.exerciseView.autoresizingMask
+        
+        self.tableView.rowHeight = 50
+            // set the rowHeight of the tableView to 50 to avoid potential issue which cause error
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -42,6 +45,26 @@ class SixthViewController: ExerciseViewController, UITableViewDelegate, UITableV
         
         Add a label to each cell that is green and centered, and have its text say “Row {X}” (X is the row number of the cell). The tableview should rotate correctly. Use Autolayout.
         */
+        
+        var stringAtSpecifiedIndex = "Row " + toString(indexPath.row)
+        
+        var greenLabel = UILabel()
+        
+        greenLabel.backgroundColor = UIColor.greenColor()
+        greenLabel.layer.cornerRadius = 5
+        greenLabel.layer.borderColor = UIColor.blueColor().CGColor
+        greenLabel.layer.borderWidth = 1.0
+        greenLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        greenLabel.text = stringAtSpecifiedIndex
+        greenLabel.textAlignment = NSTextAlignment.Center
+        
+        
+        cell?.contentView.addSubview(greenLabel)
+        cell?.contentView.addConstraint(NSLayoutConstraint(item: greenLabel, attribute: .CenterX, relatedBy:.Equal, toItem: cell?.contentView, attribute: .CenterX, multiplier: 1, constant: 0))
+        cell?.contentView.addConstraint(NSLayoutConstraint(item: greenLabel, attribute: .CenterY, relatedBy:.Equal, toItem: cell?.contentView, attribute: .CenterY, multiplier: 1, constant: 0))
+        cell?.contentView.addConstraint(NSLayoutConstraint(item: greenLabel, attribute: .Height, relatedBy:.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 30))
+        cell?.contentView.addConstraint(NSLayoutConstraint(item: greenLabel, attribute: .Width, relatedBy:.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 120))
+
         
         return cell!
     }

@@ -46,7 +46,6 @@ class ThirdViewController: ExerciseViewController {
         var squareSize = 20 as CGFloat
             // dimension for squares
         
-        
         var blueSquare1 = UIView()  // top-left
         var blueSquare2 = UIView()  // top-right
         var blueSquare3 = UIView()    // bottom-left
@@ -79,14 +78,14 @@ class ThirdViewController: ExerciseViewController {
             attribute: .Left,
             multiplier: 1,
             constant: 0))
-        self.exerciseView.addConstraint(NSLayoutConstraint(
+        self.view.addConstraint(NSLayoutConstraint(
             item: blueSquare1,
             attribute: NSLayoutAttribute.Top,
             relatedBy: .Equal,
-            toItem: self.navigationController?.navigationItem.titleView,
+            toItem: self.topLayoutGuide,
             attribute: .Bottom,
             multiplier: 1,
-            constant: navHeight!+statusbarHeight))
+            constant: 0))
         self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueSquare1,
             attribute: NSLayoutAttribute.Height,
@@ -113,14 +112,14 @@ class ThirdViewController: ExerciseViewController {
             attribute: .Right,
             multiplier: 1,
             constant: 0))
-        self.exerciseView.addConstraint(NSLayoutConstraint(
+        self.view.addConstraint(NSLayoutConstraint(
             item: blueSquare2,
             attribute: NSLayoutAttribute.Top,
             relatedBy: .Equal,
-            toItem: self.navigationController?.navigationItem.titleView,
+            toItem: self.topLayoutGuide,
             attribute: .Bottom,
             multiplier: 1,
-            constant: navHeight!+statusbarHeight))
+            constant: 0))
         self.exerciseView.addConstraint(NSLayoutConstraint(
             item: blueSquare2,
             attribute: NSLayoutAttribute.Height,
@@ -216,6 +215,7 @@ class ThirdViewController: ExerciseViewController {
     }
     
     override func shouldAutorotate() -> Bool {
+
         return true
     }
     

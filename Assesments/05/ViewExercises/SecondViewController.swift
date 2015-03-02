@@ -103,22 +103,29 @@ class SecondViewController: ExerciseViewController {
     
     
     override func viewWillLayoutSubviews() {
-        // AN ALTERNATIVE method, which gives more precise control
-        // ... This function redraws the boxes each time the device orientation changes.
+//         AN ALTERNATIVE method, which gives more precise control
+//         ... This function redraws the boxes each time the device orientation changes.
         
-//        if UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
-//        {
-//            blueSquare1.frame = CGRect(x: 0, y: staturbarHeight+navHeight!, width: 20, height: 20)
-//            blueSquare2.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: 64, width: 20, height: 20)
-//            blueSquare3.frame = CGRect(x: 0, y: CGRectGetMaxY(self.exerciseView.frame)-64, width:20, height:20)
-//            blueSquare4.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: CGRectGetMaxY(self.exerciseView.frame)-64, width: 20, height: 20)
-//            
-//        } else {
-//            blueSquare1.frame = CGRect(x: 0, y: 32, width: 20, height: 20)
-//            blueSquare2.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: 32, width: 20, height: 20)
-//            blueSquare3.frame = CGRect(x: 0, y: CGRectGetMaxY(self.exerciseView.frame)-64, width:20, height:20)
-//            blueSquare4.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: CGRectGetMaxY(self.exerciseView.frame)-64, width: 20, height: 20)
-//        }
+        var nav = self.navigationController?.navigationBar
+        var navHeight = nav?.bounds.height
+        // variables for navigation bar height
+
+        var statusbarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
+        // variable for status bar height
+
+        if UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
+        {
+            blueSquare1.frame = CGRect(x: 0, y: statusbarHeight+navHeight!, width: 20, height: 20)
+            blueSquare2.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: 64, width: 20, height: 20)
+            blueSquare3.frame = CGRect(x: 0, y: CGRectGetMaxY(self.exerciseView.frame)-64, width:20, height:20)
+            blueSquare4.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: CGRectGetMaxY(self.exerciseView.frame)-64, width: 20, height: 20)
+            
+        } else {
+            blueSquare1.frame = CGRect(x: 0, y: 32, width: 20, height: 20)
+            blueSquare2.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: 32, width: 20, height: 20)
+            blueSquare3.frame = CGRect(x: 0, y: CGRectGetMaxY(self.exerciseView.frame)-64, width:20, height:20)
+            blueSquare4.frame = CGRect(x: CGRectGetMaxX(self.exerciseView.frame)-20, y: CGRectGetMaxY(self.exerciseView.frame)-64, width: 20, height: 20)
+        }
     }   // This will determine device orientation and adjust Springs & Struts accordingly, so that each box remains in the same position.
     
         //////////////////////////////////////////
@@ -129,6 +136,7 @@ class SecondViewController: ExerciseViewController {
 
     
     override func shouldAutorotate() -> Bool {
+
         return true
     }
     

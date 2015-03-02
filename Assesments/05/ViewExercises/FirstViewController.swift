@@ -42,7 +42,6 @@ class FirstViewController: ExerciseViewController {
         
         var toolbarHeight = 44 as CGFloat
             // variable for toolbar height
-        
 
         var redBox = UIView()
         var blackBox = UIView()
