@@ -13,6 +13,7 @@ if let url = NSURL(string: "http://google.com") { // this request returns HTML d
         println(response)
         println(data) // this returns blob of bits. SWIFT doesn't care/tell what the data format is
         
+        println(data)
         var string = NSString(data: data, encoding: NSUTF8StringEncoding)
             // encoding is required
         println(string)
