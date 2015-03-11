@@ -31,7 +31,6 @@ class ThirdViewController: ExerciseViewController {
         //                                      //
         //////////////////////////////////////////
         
-        // INCOMPLETE: figure out how to accommodate statusbar height in horizontal orientation
 
         var nav = self.navigationController?.navigationBar
         var navHeight = nav?.bounds.height
