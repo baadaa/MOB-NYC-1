@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         didSet {
             self.mapView.removeAnnotations(self.mapView.annotations)
             self.mapView.addAnnotations(self.mapItems)
+            self.mapView.showAnnotations(self.mapItems, animated: true)
         }
     }
     
@@ -50,6 +51,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
             if let mapItem = response.mapItems.first as? MKMapItem {
                 var mapItem = MapPlace(coordinate: mapItem.placemark.coordinate)
                 self.mapItems.append(mapItem)
+                mapItem.name = name
             }
         }
     }
