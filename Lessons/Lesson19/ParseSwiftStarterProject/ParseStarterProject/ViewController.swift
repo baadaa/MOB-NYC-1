@@ -64,7 +64,6 @@ class ViewController: UIViewController, UIAlertViewDelegate, MKMapViewDelegate {
                 var mapItem = MapPlace(coordinate: mapItem.placemark.coordinate)
                 mapItem.title = name
                 self.mapItems.append(mapItem)
-                mapItem.name = name
             }
         }
     }
