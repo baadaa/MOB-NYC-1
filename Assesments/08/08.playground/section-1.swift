@@ -1,7 +1,9 @@
+// Playground - noun: a place where people can play
 // Assignment 8 playground
 
-import UIKit
+
 import XCPlayground
+import UIKit
 
 // Let asynchronous code run
 XCPSetExecutionShouldContinueIndefinitely()
@@ -19,9 +21,13 @@ func successfulNetworkConnection (url: String) {
             println(response)
             println(data)
             println(error)
+            // check to see if data/response/error exists
             
-            var googleDataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println(googleDataString)
+            if let googleDataString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            {
+                println(googleDataString)
+            }
+            // check for optional data from URLSession, and print it out
             
         })
         
@@ -48,13 +54,31 @@ func failingNetworkConnection(url: String) {
             println(response)
             println(data)
             println(error)
-            // There's no response, no data, but an error
+            // check to see if data/response/error exists
             
             if let errorMessage = error {
                 println("Error Domain is: \(errorMessage.domain)")
                 println("Error Code is: \(errorMessage.code)")
                 println(errorMessage.localizedDescription)
             }
+            // if there's an error, print out details about it
+            
+            if let networkResponse = response {
+                if let responseUrl = networkResponse.URL{
+                    println("Responding URL is: \(responseUrl)")
+                }
+                if let responseFilename = networkResponse.suggestedFilename{
+                    println("Responding Suggested Filename is: \(responseFilename)")
+                }
+                if let responseMIMEtype = networkResponse.MIMEType{
+                    println("Responding MIME Type is: \(responseMIMEtype)")
+                }
+                if let responseEncoding = networkResponse.textEncodingName{
+                    println("Responding Encoding Name is: \(responseEncoding)")
+                }
+                println("Expected Content Length is: \(networkResponse.expectedContentLength)" )
+            }
+            // if there's a response from server, print out details
             
         })
         
@@ -63,6 +87,10 @@ func failingNetworkConnection(url: String) {
 }
 
 failingNetworkConnection("http://generalassemb.ly/foobar.baz")
+// This will print out response details
+
+failingNetworkConnection("http://stupidNonExistentAddress.fail")
+// This will print out error message details
 
 //--------------------------------------------------------
 
@@ -75,6 +103,7 @@ failingNetworkConnection("http://generalassemb.ly/foobar.baz")
 func getNYCWeather(url: String) {
     
     if let owmUrl = NSURL(string: url) {
+        
         let weatherTask = NSURLSession.sharedSession().dataTaskWithURL(owmUrl, completionHandler: { (data, response, error) -> Void in
             
             if let weatherDict = NSJSONSerialization.JSONObjectWithData(data, options: .allZeros, error: nil) as? NSDictionary {
@@ -83,9 +112,11 @@ func getNYCWeather(url: String) {
                 
             }
         })
+        weatherTask.resume()
     }
+    
 }
-    // This function retrieves the JSON and prints the parsed result
+// This function retrieves the JSON and prints the parsed result
 
 
 func parseJSON(json: NSDictionary) -> String {
@@ -95,17 +126,44 @@ func parseJSON(json: NSDictionary) -> String {
     if let weather = json["weather"] as? NSArray {
         if let firstWeather = weather.firstObject as? NSDictionary {
             if let description = firstWeather["description"] as? NSString {
-                weatherNow = description
+                weatherNow = "Current Weather: " + description
             }
         }
     }
+    
+    if let main = json["main"] as? NSDictionary {
+        if let temperature = main["temp"] as? Float {
+            weatherNow += ", and Current Temperature: " + toString(temperature) + " (Kelvin)"
+        }
+    }
+    
     return weatherNow
 }
-    // This function parses the JSON
+// This function parses the JSON
 
 
 getNYCWeather("http://api.openweathermap.org/data/2.5/weather?q=New%20York,US")
 
+//--------------------------------------------------------
+
+
+
+
+
 
 
 //TODO four: Make a successful network connection to http://api.openweathermap.org/data/2.5/weather?q=New%20York,US, an API that speaks JSON. Populate a your above-defined model with the contents of that JSON using SwiftyJSON, then print out the model.
+
+
+
+//
+//
+//
+// AFTER COUNTLESS ATTEMPTS TO IMPORT SWIFTYJSON INTO PLAYGROUND, I FINALLY GIVE IN.
+//
+// PLEASE SEE XCODE PROJECT FOR TODO FOUR, WHERE COCOAPODS IS USED TO INCORPORATE SWIFTYJSON
+//
+//
+
+
+

@@ -1,0 +1,15 @@
+use_frameworks!
+
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'HW8-ToDoFour' do
+
+pod 'SwiftyJSON'
+
+end
+
+target 'HW8-ToDoFourTests' do
+
+end
+
